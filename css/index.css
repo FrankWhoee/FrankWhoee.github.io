@@ -2,6 +2,7 @@ h1{
   color:white;
   float:left;
   display:inline;
+  font-family: "Myriad Pro";
 }
 ul{
   list-style-type: none;
@@ -11,11 +12,20 @@ ul{
   color: white;
 }
 
-.centered{
+.logo{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.home-text{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 500%;
+  font-family: "Source Code Pro";
 }
 
 .container {
@@ -42,9 +52,12 @@ li a{
   color: white;
   text-align: center;
   padding: 14px 16px;
+  max-width:100%;
+  max-height:100%;
   text-decoration: none;
   background-color: #333333ff;
   position: sticky;
+  font-family: "Myriad Pro";
 }
 
 li a:hover {
