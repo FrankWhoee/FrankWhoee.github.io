@@ -1,0 +1,31 @@
+h1 {
+  font-family: Verdana;
+  text-align: left;
+}
+
+.pokemon-type {
+  display: inline-block;
+  width: 32%;
+}
+.pokemon {
+  height: 100px;
+  margin: 10px;
+}
+.green {
+  border: 2px solid green;
+}
+.light-green {
+  border: 1px solid lightgreen;
+}
+.orange {
+  border: 2px solid orange;
+}
+.light-orange {
+  border: 1px solid yellow;
+}
+.blue {
+  border: 2px solid blue;
+}
+.light-blue {
+  border: 1px solid lightblue;
+}
