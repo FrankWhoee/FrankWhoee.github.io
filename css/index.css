@@ -44,6 +44,7 @@ li a{
   padding: 14px 16px;
   text-decoration: none;
   background-color: #333333ff;
+  position: sticky;
 }
 
 li a:hover {
