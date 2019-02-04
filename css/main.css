@@ -2423,7 +2423,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .centered {
   color:white;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   font-family: "Source Code Pro";
   font-size: 800%;
@@ -2450,7 +2450,7 @@ body, html {
 .hello-world-text{
   color:white;
   position: absolute;
-  top: 70%;
+  top: 90%;
   left: 50%;
   font-family: "Source Code Pro";
   font-size:6vw;
