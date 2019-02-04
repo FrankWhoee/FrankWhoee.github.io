@@ -2430,6 +2430,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   transform: translate(-50%, -50%);
 }
 
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../img/bfr.png");
+
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .hello-world-text{
   color:white;
   position: absolute;
