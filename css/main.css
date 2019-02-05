@@ -2434,7 +2434,20 @@ body, html {
   height: 100%;
 }
 
-.parallax {
+.contact-parallax {
+  /* The image used */
+  background-image: url("../img/contact-us-earth.png");
+
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.home-parallax {
   /* The image used */
   background-image: url("../img/bfr.png");
 
@@ -2445,6 +2458,16 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.contact-text{
+  color:white;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-family: "Source Code Pro";
+  font-size:6vw;
+  transform: translate(-50%, -50%);
 }
 
 .hello-world-text{
