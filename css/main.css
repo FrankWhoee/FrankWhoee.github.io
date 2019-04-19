@@ -2472,8 +2472,8 @@ body, html {
 
 .hello-world-text{
   color:white;
-  position: absolute;
-  top: 90%;
+  position: relative;
+  top: 30%;
   left: 50%;
   font-family: "Source Code Pro";
   font-size:6vw;
