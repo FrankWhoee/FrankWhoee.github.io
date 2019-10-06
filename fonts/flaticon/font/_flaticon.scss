@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 20/03/2019 02:18
+    Creation date: 06/10/2019 17:52
     */
 
     @font-face {
@@ -37,18 +37,26 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-ideas:before { content: "\f100"; }
-.flaticon-flasks:before { content: "\f101"; }
-.flaticon-analysis:before { content: "\f102"; }
-.flaticon-ux-design:before { content: "\f103"; }
-.flaticon-web-design:before { content: "\f104"; }
+    .flaticon-team:before { content: "\f100"; }
+.flaticon-code:before { content: "\f101"; }
+.flaticon-school:before { content: "\f102"; }
+.flaticon-cap:before { content: "\f103"; }
+.flaticon-microscope:before { content: "\f104"; }
 .flaticon-idea:before { content: "\f105"; }
-.flaticon-innovation:before { content: "\f106"; }
+.flaticon-camera:before { content: "\f106"; }
+.flaticon-paint-brush:before { content: "\f107"; }
+.flaticon-repairing-service:before { content: "\f108"; }
+.flaticon-sports-and-competition:before { content: "\f109"; }
+.flaticon-plane:before { content: "\f10a"; }
     
-    $font-Flaticon-ideas: "\f100";
-    $font-Flaticon-flasks: "\f101";
-    $font-Flaticon-analysis: "\f102";
-    $font-Flaticon-ux-design: "\f103";
-    $font-Flaticon-web-design: "\f104";
+    $font-Flaticon-team: "\f100";
+    $font-Flaticon-code: "\f101";
+    $font-Flaticon-school: "\f102";
+    $font-Flaticon-cap: "\f103";
+    $font-Flaticon-microscope: "\f104";
     $font-Flaticon-idea: "\f105";
-    $font-Flaticon-innovation: "\f106";
+    $font-Flaticon-camera: "\f106";
+    $font-Flaticon-paint-brush: "\f107";
+    $font-Flaticon-repairing-service: "\f108";
+    $font-Flaticon-sports-and-competition: "\f109";
+    $font-Flaticon-plane: "\f10a";
