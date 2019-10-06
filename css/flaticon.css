@@ -36,10 +36,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-ideas:before { content: "\f100"; }
-.flaticon-flasks:before { content: "\f101"; }
-.flaticon-analysis:before { content: "\f102"; }
-.flaticon-ux-design:before { content: "\f103"; }
-.flaticon-web-design:before { content: "\f104"; }
-.flaticon-idea:before { content: "\f105"; }
-.flaticon-innovation:before { content: "\f106"; }
+.flaticon-team:before { content: "\f100"; }
+.flaticon-code:before { content: "\f101"; }
+.flaticon-backpack:before { content: "\f102"; }
+.flaticon-grad-hat:before { content: "\f103"; }
+.flaticon-microscope:before { content: "\f104"; }
+.flaticon-lightbulb:before { content: "\f105"; }
+.flaticon-camera:before { content: "\f106"; }
+.flaticon-paintbrush:before { content: "\f107"; }
+.flaticon-gear:before { content: "\f108"; }
+.flaticon-medal:before { content: "\f109"; }
