@@ -3338,12 +3338,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #007bff;
+    color: #da6b21;
     text-decoration: none;
 }
 
 .btn-link:hover {
-    color: #0056b3;
+    color: #da6b21;
     text-decoration: underline;
 }
 
@@ -9607,6 +9607,11 @@ button.bg-dark:focus {
         padding-left: 3rem !important;
     }
 
+    .pl-sm-10,
+    .px-sm-10 {
+        padding-left: 10vw !important;
+    }
+
     .m-sm-n1 {
         margin: -0.25rem !important;
     }
@@ -13525,4 +13530,73 @@ textarea.form-control {
 .nopadding {
     padding: 0 !important;
     margin: 0 !important;
+}
+
+button.accordion {
+    background-color: #d7f2bc;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #addf7f;
+}
+
+button.accordion:after {
+    content: '\2212';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+button.accordion:before {
+    content: '\2212';
+    color: #777;
+    font-weight: bold;
+    font-size: 22px;
+    position: absolute;
+    right: 18px;
+    transform: rotate(0deg);
+    transition: .3s all ease;
+}
+
+button.accordion.active:before {
+    content: "\2212";
+    transform: rotate(90deg);
+}
+
+.accordion-panel {
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 20px;
+    border: 1px solid #addf80;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.filter-box {
+    border-radius: 0;
+}
+
+.filter-body {
+    border: 1px solid #addf80;
+    padding: 10px 0;
+    transition: height 0.2s ease-out;
+    width: 100%;
 }

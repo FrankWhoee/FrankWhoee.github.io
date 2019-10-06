@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <style>
     @font-face {
@@ -59,7 +60,7 @@
     </div>
 </nav>
 <section class="hero-wrap js-fullheight backgroundimage">
-    <div class="container">
+    <div class="container" style="z-index: 9999">
         <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
             <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
                 <div class="text text-center">
@@ -77,8 +78,7 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="mouse" style="z-index: -1">
+    <div class="mouse">
         <a href="#" class="mouse-icon">
             <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
         </a>
@@ -374,45 +374,123 @@
         </div>
     </div>
 </section>
-
 <section class="ftco-section ftco-project" id="projects-section">
     <div class="container-fluid px-md-0">
         <div class="row no-gutters justify-content-center pb-5">
-            <div class="col-md-12 heading-section text-center ftco-animate">
+            <div class="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated">
                 <h1 class="big big-2">Projects</h1>
                 <h2 class="mb-4 text-white">My Projects</h2>
             </div>
         </div>
         <br><br><br>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/aura-slide.png" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="images/stride-slide.png" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="images/ts-slide.png" alt="Third slide">
+        <div style="text-align: center;padding-top: 10vh;"><img src="images/aura-slide.png"
+                                                                style="width: 50vw;display: inline-block"></div>
+        <div class="row no-gutters justify-content-center pb-5">
+            <div class="col-md-7 heading-section text-left ftco-animate fadeInUp ftco-animated">
+                <h2>Aura</h2>
+                <h3 class="mb-4 text-white">Accurate early detection of GBM Brain Cancer with AI</h3>
+                <h4>GVRSF 2019 - Silver Medal</h4>
+                <h4>GVRSF 2019 - Best Computer Science Project</h4>
+                <h4>GVRSF 2019 - BC Game Developer's Innovation Award</h4>
+                <p>
+                    Despite great advances in the field of oncology, glioblastoma multiforme’s extreme aggression still
+                    results in a grim prognosis. A median survival length of a mere 11-15 months, couples with one of
+                    the lowest survival rates of all cancers, at ~4%.
+                    <br><br>
+                    Simultaneously, detection models have made great progress with non-small cell lung cancer and
+                    Alzheimer's in the medical diagnostics industry, while the current conventional detection of brain
+                    tumors involves human inspection of radiological imagery for tissue abnormalities. Our project aims
+                    to utilize convolutional neural networks on MR imaging for the same purpose. Work was primarily
+                    split into three categories: data extraction and preprocessing of imagery, convolutional neural
+                    network training, and the machine learning classification period.
+                    <br><br>
+                    The automation of early-stage tumor detection drastically reduces the workload of radiologists, aids
+                    with patient outcomes through earlier treatment, and may provide insight into the characteristics of
+                    high-grade astrocytomas. MR Imaging and ML algorithms look promising regarding their potential
+                    applications in the medical field, particularly in the field of medical diagnoses.
+                </p>
+                <p><a href="https://github.com/frankwhoee/aura"
+                      class="btn btn-primary py-3 px-3">Go to Repository</a></p>
+            </div>
+        </div>
+        <div style="text-align: center;padding-top: 10vh;"><img src="images/ts-slide.png"
+                                                                style="width: 50vw;display: inline-block"></div>
+        <div class="row no-gutters justify-content-center pb-5">
+            <div class="col-md-7 heading-section text-left ftco-animate fadeInUp ftco-animated">
+                <h2>TrafficSim</h2>
+                <h3 class="mb-4 text-white">Optimising and refining traffic through simulation</h3>
+                <h4>GVRSF 2018 - Silver Medal</h4>
+                <h4>GVRSF 2018 - Best Computer Science Project</h4>
+                <h4>GVRSF 2018 - Best Mathematical Sciences Project</h4>
+                <p>
+                    In our current traffic system, congestion has become a major problem. However, the problem of
+                    traffic creates a dilemma for governments as they often cannot afford to construct more roads due to
+                    their high cost and maintenance fees. Furthermore, paving new roads can lead to habitat segregation
+                    and environmental damage as large areas of landscape are cleared for their construction. As the
+                    demand for transportation grows, the problem of continued traffic congestion will inevitably follow
+                    the demand. To attempt to solve this problem, we set out to find the optimal and most efficient road
+                    system through simulated swarm intelligence as it would allow a smoother flow of traffic with the
+                    same construction and maintenance costs.
+                    <br><br>
+                    In our search for the answer to congestion, we coded a digital environment to simulate the flow of
+                    traffic with differing types of road systems. Each car has an objective and uses a typical
+                    breadth-first path-finding algorithm to navigate to its set destination. Furthermore, as our end
+                    goal was to create a program that could be feasibly used within real life scenarios, we implement
+                    the feature to create customized road networks to simulate traffic in cities. Due to the nature of
+                    computerized simulations, we had the ability to monitor and control each individual variable very
+                    precisely. This allowed us to maintain a very high level of consistency between each one of the
+                    trials.
+                    <br><br>
+                    The grid system, orbital system and tributary trees were tested to see which one was the most
+                    efficient. Each system was simulated 24 times, each one for a total of 30 001 ticks. After each
+                    trial, all the conditions would be reset so as not to affect future trials. Time was also kept to
+                    keep track of the performance of each trial.
+                    <br><br>
+                    The results prove that the grid system is the most efficient road system as it had an average of
+                    4.125 cars remaining at 30 001 ticks. In comparison, the orbital system had an average of 12.167
+                    cars remaining and the tributary trees had 41.75 cars remaining. Observing the simulation, we could
+                    determine that the cars in the grid system had a variety of routes that allowed each individual car
+                    to have multiple paths at its disposal. Overall, this allowed the grid system to perform the best
+                    that supports our original hypothesis.
+                </p>
+                <p><a href="https://github.com/FrankWhoee/TrafficSim"
+                      class="btn btn-primary py-3 px-3">Go to Repository</a></p>
+            </div>
+        </div>
+        <div style="text-align: center;padding-top: 10vh;"><img src="images/stride-slide.png"
+                                                                style="width: 50vw;display: inline-block"></div>
+        <div class="row no-gutters justify-content-center pb-5">
+            <div class="col-md-7 heading-section text-left ftco-animate fadeInUp ftco-animated">
+                <h2>Stride ML</h2>
+                <h3 class="mb-4 text-white">Identification via gait accelerometer data on a phone using ML</h3>
+                <h4>nwHacks 2019 - Top 20 Award</h4>
+                <p>
+                    Stride is a machine learning project based on security. To protect against theft, we built an app
+                    that could track your phone's accelerometer data to determine who is carrying the phone. If the
+                    walking patterns are not consistent with the owner's walking pattern, the phone will alert the
+                    owner's smart watch. The core technology is the neural network that can identify the person walking,
+                    which can be applied to many smart devices, provided they have accelerometers. In the future, we
+                    hope to embed this in a tag that can be placed with bags, backpacks, wallets, etc. to protect your
+                    valuable belongings.
+                </p>
+                <div style="text-align: center">
+                    <div class = "container col-md-5" style="display: inline-block">
+                        <div class="row">
+                            <div class="col-sm">
+                                <p><a href="https://github.com/FrankWhoee/Stride"
+                                      class="btn btn-primary py-3 px-3">Go to Repository</a></p>
+                            </div>
+                            <div class="col-sm">
+                                <p><a href="https://devpost.com/software/stride-fs0ncy"
+                                      class="btn btn-primary py-3 px-3">Go to DevPost</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </div>
 </section>
-
 <section class="hero-wrap js-fullheight artbackgroundimage" id="art">
     <div class="container heading-section">
         <div class="row">
@@ -420,7 +498,8 @@
             <div class="col">
                 <div style="padding-top:21vh">
                     <h2 class="big-art">Design <br> and <br>Photography</h2>
-                    <p style="font-size: 1vw">I've been working with Inkscape for 4 years now, and I design logos for myself and other people,
+                    <p style="font-size: 1vw">I've been working with Inkscape for 4 years now, and I design logos for
+                        myself and other people,
                         but when
                         I have free time, I make art. I've also been doing photography for over 8 years now.</p>
                     <p><a href="myartportfolio.pdf"
@@ -512,18 +591,18 @@
         </div>
         <br><br>
         <div class="row d-flex contact-info mb-5">
-                <div class=" box" style="text-align: center">
-                    <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icon-paper-plane"></span>
-                    </div>
-                    <div>
-                        <h3 class="mb-4">Email Address</h3>
-                        <p><a href="mailto:huifrank@live.com">huifrank@live.com</a></p>
-                    </div>
+            <div class=" box" style="text-align: center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-paper-plane"></span>
                 </div>
+                <div>
+                    <h3 class="mb-4">Email Address</h3>
+                    <p><a href="mailto:huifrank@live.com">huifrank@live.com</a></p>
+                </div>
+            </div>
 
         </div>
-        </div>
+    </div>
     </div>
 </section>
 <div style="padding-top:20vh"></div>
