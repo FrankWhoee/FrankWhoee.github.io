@@ -13599,3 +13599,10 @@ button.accordion.active:before {
     transition: height 0.2s ease-out;
     width: 100%;
 }
+
+.anchor{
+    display: block;
+    height: 115px; /*same height as header*/
+    margin-top: -115px; /*same height as header*/
+    visibility: hidden;
+}
