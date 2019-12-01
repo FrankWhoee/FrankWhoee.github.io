@@ -13606,3 +13606,17 @@ button.accordion.active:before {
     margin-top: -115px; /*same height as header*/
     visibility: hidden;
 }
+
+.img-fade{
+    opacity: 0.25;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;;
+}
+
+.img-fade:hover {
+    opacity: 1;
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
