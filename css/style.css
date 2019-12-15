@@ -13429,7 +13429,7 @@ textarea.form-control {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -13608,7 +13608,8 @@ button.accordion.active:before {
 }
 
 .img-fade{
-    opacity: 0.25;
+    opacity: 0.25you
+;
     transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -webkit-transition: opacity 1s ease-in-out;;
@@ -13619,4 +13620,26 @@ button.accordion.active:before {
     transition: opacity .55s ease-in-out;
     -moz-transition: opacity .55s ease-in-out;
     -webkit-transition: opacity .55s ease-in-out;
+}
+
+body {
+    overflow: overlay;
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(218,107,33,0.75);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(218,107,33,1);
+    border-radius: 10px;
 }
