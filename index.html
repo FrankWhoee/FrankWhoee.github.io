@@ -36,7 +36,59 @@
     }
 </style>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color: black">
-
+<script>
+    const request = async() =>{
+        var contributions = {};
+        for(i = 0; i < 10; i++){
+            const response = await fetch("https://api.github.com/users/frankwhoee/events?page=" + i);
+            const json = await response.json();
+            json.forEach(function (item, index) {
+                if (item['type'] === 'PushEvent' || item['type'] === 'IssueCommentEvent') {
+                    var contributeDate = new Date(item['created_at']);
+                    // console.log("" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1));
+                    if(contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] === undefined){
+                        contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] = 1;
+                    }else{
+                        contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] += 1;
+                    }
+                }
+            });
+        }
+        var borderColors = [];
+        for(i = 0; i < Object.keys(contributions).length; i++){
+            borderColors.push('rgba(218,107,33,1)');
+        }
+        var backgroundColors = [];
+        for(i = 0; i < Object.keys(contributions).length; i++){
+            backgroundColors.push('rgba(218,107,33,0.2)');
+        }
+        console.log(backgroundColors);
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Object.keys(contributions),
+                datasets: [{
+                    label: 'Github Contributions',
+                    data: Object.values(contributions),
+                    backgroundColor:backgroundColors,
+                    borderColor: borderColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    };
+    request();
+</script>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
         <a href="index.html"><img src="images/logo-white.png" style="height:40px;"></a>
@@ -157,68 +209,9 @@
         </div>
     </div>
 </section>
-<div class="container" style="width: 50vw; height: 50vh">
+<div class="container" style="width: 80vw;">
     <canvas id="myChart"></canvas>
 </div>
-<script>
-    const request = async() =>{
-        var contributions = [0,0,0,0,0,0,0,0,0,0,0,0];
-        for(i = 0; i < 10; i++){
-            const response = await fetch("https://api.github.com/users/frankwhoee/events?page=" + i);
-            const json = await response.json();
-            json.forEach(function (item, index) {
-                if (item['type'] === 'PushEvent' || item['type'] === 'IssueCommentEvent') {
-                    var contributeDate = new Date(item['created_at']);
-                    contributions[contributeDate.getMonth()] += 1;
-                }
-            });
-        }
-        var labels = [];
-        for(i = 12; i >= 0; i--){
-            const date = new Date(2020,i,10);
-            const month = date.toLocaleString('default', { month: 'long' });
-            if(contributions[date.getMonth()] > 0){
-                console.log("Got " + contributions[date.getMonth()] + " in " + month);
-                labels.push(month)
-            }else{
-                console.log("Got no contributions in " + month);
-                contributions.splice(i,1);
-            }
-        }
-        console.log(contributions);
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Commits',
-                    data: contributions,
-                    backgroundColor: [
-                        'rgba(218,107,33,0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(218,107,33,1)',
-                        'rgba(218,107,33,1)',
-                        'rgba(218,107,33,1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-    };
-    request();
-</script>
 <section class="ftco-section ftco-no-pb goto-here" id="resume">
     <div class="container">
         <div class="row">
