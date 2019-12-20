@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/single.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +161,8 @@
       <workItem from="1574038210786" duration="718000" />
       <workItem from="1575236479315" duration="2268000" />
       <workItem from="1575354336747" duration="509000" />
-      <workItem from="1576378023384" duration="243000" />
+      <workItem from="1576378023384" duration="1019000" />
+      <workItem from="1576822226435" duration="4293000" />
     </task>
     <servers />
   </component>
