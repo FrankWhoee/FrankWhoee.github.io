@@ -37,29 +37,29 @@
 </style>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color: black">
 <script>
-    const request = async() =>{
+    const request = async () => {
         var contributions = {};
-        for(i = 0; i < 10; i++){
+        for (i = 0; i < 10; i++) {
             const response = await fetch("https://api.github.com/users/frankwhoee/events?page=" + i);
             const json = await response.json();
             json.forEach(function (item, index) {
                 if (item['type'] === 'PushEvent' || item['type'] === 'IssueCommentEvent') {
                     var contributeDate = new Date(item['created_at']);
                     // console.log("" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1));
-                    if(contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] === undefined){
+                    if (contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] === undefined) {
                         contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] = 1;
-                    }else{
+                    } else {
                         contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] += 1;
                     }
                 }
             });
         }
         var borderColors = [];
-        for(i = 0; i < Object.keys(contributions).length; i++){
+        for (i = 0; i < Object.keys(contributions).length; i++) {
             borderColors.push('rgba(218,107,33,1)');
         }
         var backgroundColors = [];
-        for(i = 0; i < Object.keys(contributions).length; i++){
+        for (i = 0; i < Object.keys(contributions).length; i++) {
             backgroundColors.push('rgba(218,107,33,0.2)');
         }
         console.log(backgroundColors);
@@ -71,7 +71,7 @@
                 datasets: [{
                     label: 'Github Contributions',
                     data: Object.values(contributions).reverse(),
-                    backgroundColor:backgroundColors,
+                    backgroundColor: backgroundColors,
                     borderColor: borderColors,
                     borderWidth: 1
                 }]
@@ -192,7 +192,7 @@
                 <div class="counter-wrap ftco-animate d-flex mt-md-3">
                     <div class="text">
                         <p class="mb-4">
-                            <span class="number"  id="repos" data-number="61">0</span>
+                            <span class="number" id="repos" data-number="61">0</span>
                             <span class="text-white">Repositories</span>
                         </p>
                         <p class="mb-4">
@@ -257,16 +257,24 @@
                 <div id="page-2" class="page two">
                     <h2 class="heading">Experience</h2>
                     <div class="resume-wrap d-flex ftco-animate">
+
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="flaticon-code"></span>
                         </div>
+
                         <div class="text pl-3">
                             <span class="date">2018</span>
                             <h2>MachoHacks</h2>
-                            <span class="position">Machobear Studio</span>
-                            <p>At this hackathon, our team built a blockchain clicker game that utilised
-                                decentralisation to create unique items and weapons that evolved over time and could not
-                                be destroyed. My role was implementing the blockchain into the game.</p>
+                            <hr style="border-color: #fd7e14">
+                            <a data-toggle="collapse" href="#machohacks-collapse" role="button" aria-expanded="false"
+                               aria-controls="collapseExample" onclick="toggle_less_more(this)">> More</a>
+                            <div class="collapse" id="machohacks-collapse">
+                                <span class="position">Machobear Studio</span>
+                                <p>At this hackathon, our team built a blockchain clicker game that utilised
+                                    decentralisation to create unique items and weapons that evolved over time and could
+                                    not
+                                    be destroyed. My role was implementing the blockchain into the game.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="resume-wrap d-flex ftco-animate">
@@ -276,9 +284,16 @@
                         <div class="text pl-3">
                             <span class="date">2018</span>
                             <h2>hackseq 2018</h2>
-                            <span class="position">University of British Columbia</span>
-                            <p>At this hackathon, our team built a project using blockchain to record and track cases of
-                                infectious diseases. My role was creating statistical analyses from blockchain data.</p>
+                            <hr style="border-color: #fd7e14">
+                            <a data-toggle="collapse" href="#hs18-collapse" role="button" aria-expanded="false"
+                               aria-controls="collapseExample" onclick="toggle_less_more(this)">> More</a>
+                            <div class="collapse" id="hs18-collapse">
+                                <span class="position">University of British Columbia</span>
+                                <p>At this hackathon, our team built a project using blockchain to record and track
+                                    cases of
+                                    infectious diseases. My role was creating statistical analyses from blockchain
+                                    data.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="resume-wrap d-flex ftco-animate">
@@ -288,10 +303,48 @@
                         <div class="text pl-3">
                             <span class="date">2019</span>
                             <h2>nwHacks 2019</h2>
+                            <hr style="border-color: #fd7e14">
+                            <a data-toggle="collapse" href="#nw19-collapse" role="button" aria-expanded="false"
+                               aria-controls="collapseExample" onclick="toggle_less_more(this)">> More</a>
+                            <div class="collapse" id="nw19-collapse">
+                                <span class="position">University of British Columbia</span>
+                                <p>At this hackathon, our team built an android app that analysed gait using
+                                    accelerometer
+                                    data to identify the person walking using deep learning AI. My role in this
+                                    hackathon
+                                    was designing and training the deep learning model.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex ftco-animate">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="flaticon-code"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2019</span>
+                            <h2>hackseq 2019</h2>
                             <span class="position">University of British Columbia</span>
-                            <p>At this hackathon, our team built an android app that analysed gait using accelerometer
-                                data to identify the person walking using deep learning AI. My role in this hackathon
-                                was designing and training the deep learning model.</p>
+                            <p>Using machine learning, our team was able to identify which strains of the influenza
+                                virus were most succesful, with an accuracy of 86% compared to the WHO accuracy of
+                                40-60%. My role was to design vaccines and compare them to WHO-selected seasonal
+                                vaccines using the 'augur' pipeline. In addition, I visualised data gathered from our
+                                predictions.</p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex ftco-animate">
+
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="flaticon-code"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2019</span>
+                            <h2>Local Hack Day- Build Day 2019</h2>
+                            <span class="position">University of British Columbia</span>
+                            <p>Our project is called Ubique, the Latin name for 'Anywhere'. Our project involves
+                                using a router and an 1 TB SSD to store all of Wikipedia and The Gutenberg Project,
+                                then serve them via an internet connection that you can bring anywhere. We used Flask
+                                and JS to build this application. My role was implementing The Gutenberg Project into
+                                Ubique.</p>
                         </div>
                     </div>
                     <div class="resume-wrap d-flex ftco-animate">
