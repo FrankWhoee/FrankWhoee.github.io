@@ -67,10 +67,10 @@
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: Object.keys(contributions),
+                labels: Object.keys(contributions).reverse(),
                 datasets: [{
                     label: 'Github Contributions',
-                    data: Object.values(contributions),
+                    data: Object.values(contributions).reverse(),
                     backgroundColor:backgroundColors,
                     borderColor: borderColors,
                     borderWidth: 1
