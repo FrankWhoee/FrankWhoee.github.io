@@ -4,6 +4,7 @@
     <list default="true" id="710c4f0e-01ab-407f-8654-d26486f4b5c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,34 +21,6 @@
         <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>li</find>
-      <find>nav ul li a</find>
-      <find>nav ul</find>
-      <find>ul</find>
-      <find>container</find>
-      <find>vector</find>
-      <find>photography/</find>
-      <find>logo</find>
-      <find>four</find>
-      <find>font-family</find>
-      <find>navbar-brand</find>
-      <find>body</find>
-      <find>body {</find>
-      <find>p {</find>
-      <find>text</find>
-      <find>h2</find>
-      <find>resume-section</find>
-      <find>contact-</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>Vector</replace>
-      <replace>photographs/</replace>
-      <replace>picture</replace>
-      <replace />
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -163,6 +136,7 @@
       <workItem from="1576378023384" duration="1019000" />
       <workItem from="1576822226435" duration="4639000" />
       <workItem from="1576854506958" duration="2175000" />
+      <workItem from="1576892151748" duration="1069000" />
     </task>
     <servers />
   </component>

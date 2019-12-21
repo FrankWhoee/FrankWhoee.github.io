@@ -173,10 +173,20 @@
 	};
 	scrollWindow();
 
-	
+    const getStats = async() =>{
+        const response = await fetch("https://api.github.com/users/frankwhoee");
+        const json = await response.json();
+        $("#repos").attr("data-number",json['public_repos']);
+        var now = new Date();
+        var start = new Date(2014,0);
+        $("#years-of-programming").attr("data-number",now.getFullYear() - start.getFullYear());
+        console.log(json['public_repos']);
+        console.log(now.getFullYear() - start.getFullYear());
+    };
 
-	var counter = function() {
-		
+
+	var counter = async() =>{
+        await getStats();
 		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
@@ -193,12 +203,12 @@
 					  }, 7000
 					);
 				});
-				
+
 			}
 
 		} , { offset: '95%' } );
 
-	}
+	};
 	counter();
 
 
