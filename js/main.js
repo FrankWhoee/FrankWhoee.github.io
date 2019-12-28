@@ -3,14 +3,14 @@
  	easing: 'slide'
  });
 
-function toggle_less_more(clicked){
-	console.log($(clicked.getAttribute("href"))[0].classList.contains("show"));
-	if($(clicked.getAttribute("href"))[0].classList.contains("show")){
-		clicked.textContent = "> More";
-	}else{
-		clicked.textContent = "> Less";
+ function toggle_less_more(clicked){
+	 console.log($(clicked.getAttribute("href"))[0].classList.contains("show"));
+	 if($(clicked.getAttribute("href"))[0].classList.contains("show")){
+		 clicked.textContent = "▶ See More";
+	 }else{
+		 clicked.textContent = "▼ See Less";
 
-	}
+	 }
  }
 
 (function($) {
