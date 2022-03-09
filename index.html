@@ -1,780 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>FrankWhoee</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="images/spacelogo.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="SDN">
+    <meta property="og:image"
+          content="https://raw.githubusercontent.com/FrankWhoee/FrankWhoee.github.io/master/images/thumbnail.png">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="SDN">
+    <meta property="twitter:image"
+          content="https://raw.githubusercontent.com/FrankWhoee/FrankWhoee.github.io/master/images/thumbnail.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <title>FrankWhoee</title>
 </head>
-<style>
-    @font-face {
-        font-family: "Acre";
-        src: url("fonts/acre.otf");
-    }
-
-    @font-face {
-        font-family: "Ailerons";
-        src: url("fonts/Ailerons.otf");
-    }
-</style>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color: black">
-<script>
-    const request = async () => {
-        var contributions = {};
-        for (i = 0; i < 10; i++) {
-            const response = await fetch("https://api.github.com/users/frankwhoee/events?page=" + i);
-            const json = await response.json();
-            json.forEach(function (item, index) {
-                if (item['type'] === 'PushEvent' || item['type'] === 'IssueCommentEvent') {
-                    var contributeDate = new Date(item['created_at']);
-                    // console.log("" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1));
-                    if (contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] === undefined) {
-                        contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] = 1;
-                    } else {
-                        contributions["" + (contributeDate.getMonth() + 1) + "/" + (contributeDate.getDay() + 1)] += 1;
-                    }
-                }
-            });
-        }
-        var borderColors = [];
-        for (i = 0; i < Object.keys(contributions).length; i++) {
-            borderColors.push('rgba(218,107,33,1)');
-        }
-        var backgroundColors = [];
-        for (i = 0; i < Object.keys(contributions).length; i++) {
-            backgroundColors.push('rgba(218,107,33,0.2)');
-        }
-        console.log(backgroundColors);
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: Object.keys(contributions).reverse(),
-                datasets: [{
-                    label: 'Github Contributions',
-                    data: Object.values(contributions).reverse(),
-                    backgroundColor: backgroundColors,
-                    borderColor: borderColors,
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-    };
-    request();
-</script>
-<script>
-
-</script>
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-    <div class="container">
-        <a href="index.html"><img src="images/logo-white.png" style="height:40px;"></a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-                data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span style="color: white" class="oi oi-menu"></span> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav nav ml-auto">
-                <li class="nav-item"><a style="color: white" href="#home-section" class="nav-link"><span>Home</span></a>
-                </li>
-                <li class="nav-item"><a style="color: white" href="#about"
-                                        class="nav-link"><span>About</span></a></li>
-                <li class="nav-item"><a style="color: white" href="#resume" class="nav-link"><span>Resume</span></a>
-                </li>
-                <li class="nav-item"><a style="color: white" href="#projects"
-                                        class="nav-link"><span>Projects</span></a></li>
-                <li class="nav-item"><a style="color: white" href="#art" class="nav-link"><span>My Art</span></a>
-                </li>
-                <li class="nav-item"><a style="color: white" href="#contact"
-                                        class="nav-link"><span>Contact</span></a></li>
-            </ul>
+<body style="background: white;">
+<nav class="navbar navbar-expand-lg navbar-light p-4 navbar-fixed-top"
+     style="background: transparent; position: absolute;top:0;width: 100%">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#join">HOME</a>
+                <a class="nav-link" href="#who">ABOUT</a>
+                <a class="nav-link" href="#socials">RESUME</a>
+                <a class="nav-link" href="#contact">ART</a>
+                <a class="nav-link" href="#contact">CONTACT</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<section class="hero-wrap js-fullheight backgroundimage">
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
-            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-                <div class="text text-center">
-                    <a href="index.html"><img src="images/logo-white.png" style="height:20vh"></a>
-                    <br>
-                    <br>
-                    <h2 style="color: white">I'm
-                        <span
-                                class="txt-rotate"
-                                data-period="1000"
-                                data-rotate='[ "Frank Hui.", "a Designer.", "a Programmer.", "a Photographer."]'></span>
-                    </h2>
-                    <span class="subheading" style="font-family: 'Acre'; color: white;">Hello World</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mouse">
-        <a href="#" class="mouse-icon">
-            <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-        </a>
-    </div>
-</section>
-<br><br>
-<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about">
-    <div class="container">
-        <div class="row d-flex no-gutters">
-            <div class="col-md-6 col-lg-6">
-                <div class="img-about img d-flex align-items-stretch">
-                    <img src="images/about-me-image.png" style="max-width: 75vw;">
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 pl-md-5 py-5">
-                <div class="row justify-content-start pb-3">
-                    <div class="col-md-12 heading-section ftco-animate">
-                        <h1 class="big">About</h1>
-                        <h2 class="mb-4 text-light">About Me</h2>
-                        <p class="text-light">Hi, I'm Frank Hui, a second year student at the University of British Columbia. I'm passionate
-                            in computer science, photography, and graphic design.</p>
-                        <br>
-                        <div class="row" style="display: flex">
-                            <div class="col" align="center">
-                                <a href="https://github.com/frankwhoee">
-                                    <img class="img-fade" src="images/github-white.svg" style="max-height: 5vh">
-                                </a>
-                            </div>
-                            <div class="col" align="center">
-                                <a href="https://devpost.com/FrankWhoee">
-                                    <img class="img-fade" src="images/devpost-logo.svg" style="max-height: 5vh">
-                                </a>
-                            </div>
-                            <div class="col" align="center">
-                                <a href="https://www.flickr.com/photos/157648639@N04/">
-                                    <img class="img-fade" src="images/flickr-logo.svg" style="max-height: 5vh">
-                                </a>
-                            </div>
-                            <div class="col" align="center">
-                                <a href="Resume2Jan2021.pdf">
-                                    <img class="img-fade" src="images/resume-icon.svg" style="max-height: 5vh">
-                                </a>
-                            </div>
-                        </div>
-                        <ul class="about-info mt-4 px-md-0 px-2">
-                            <li class="d-flex"><span>Name:</span> <span>Frank Hui</span></li>
-                            <li class="d-flex"><span>Email:</span> <span>huifrank@live.com</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="counter-wrap ftco-animate d-flex mt-md-3">
-                    <div class="text">
-                        <p class="mb-4">
-                            <span class="number" id="repos" data-number="67">0</span>
-                            <span class="text-white">Repositories</span>
-                        </p>
-                        <p class="mb-4">
-                            <span class="number" data-number="5">0</span>
-                            <span class="text-white">Hackathons</span>
-                        </p>
-                        <p class="mb-4">
-                            <span class="number" id="years-of-programming" data-number="8">0</span>
-                            <span class="text-white">Years of Programming</span>
-                        </p>
-                        <br>
-                        <p><a href="Resume2Jan2021.pdf"
-                              class="btn btn-primary py-3 px-3">Download Resume</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="container" style="width: 80vw;">
-    <canvas id="myChart"></canvas>
+
+<div style="background: transparent; height: 100vh; width: 100vw; max-width:100%; display: flex;
+  justify-content: center; align-items: center;overflow: hidden">
+
+    <img src="images/launch.svg"
+         style="position: absolute; left: -1%; top: 20%; width: 40vw; z-index: -9999; overflow: hidden">
+    <img src="images/logoblack.svg" style="width: 10vw">
 </div>
-<section class="ftco-section ftco-no-pb goto-here" id="resume">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <nav id="navi">
-                    <ul>
-                        <li><a href="#page-1">Education</a></li>
-                        <li><a href="#page-2">Experience</a></li>
-                        <li><a href="#page-3">Skills</a></li>
-                        <li><a href="#page-4">Awards</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-9">
-                <div id="page-1" class="page one">
-                    <h2 class="heading">Education</h2>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-backpack"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2015-2020</span>
-                            <h2>High School</h2>
-                            <span class="position">Burnaby North Secondary School</span>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-grad-hat"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2019</span>
-                            <h2>CMPT 125, CMPT 127</h2>
-                            <span class="position">Simon Fraser University</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="page-2" class="page two">
-                    <h2 class="heading">Experience</h2>
-                    <div class="resume-wrap d-flex ftco-animate">
-
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-code"></span>
-                        </div>
-
-                        <div class="text pl-3">
-                            <span class="date">2018</span>
-                            <h2>MachoHacks</h2>
-                            <hr style="border-color: #fd7e14">
-                            <a data-toggle="collapse" href="#machohacks-collapse" role="button" aria-expanded="false"
-                               aria-controls="collapseExample" onclick="toggle_less_more(this)">▶ See More</a>
-                            <div class="collapse" id="machohacks-collapse">
-                                <span class="position">Machobear Studio</span>
-                                <p>At this hackathon, our team built a blockchain clicker game that utilised
-                                    decentralisation to create unique items and weapons that evolved over time and could
-                                    not
-                                    be destroyed. My role was implementing the blockchain into the game.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-code"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2018</span>
-                            <h2>hackseq 2018</h2>
-                            <hr style="border-color: #fd7e14">
-                            <a data-toggle="collapse" href="#hs18-collapse" role="button" aria-expanded="false"
-                               aria-controls="collapseExample" onclick="toggle_less_more(this)">▶ See More</a>
-                            <div class="collapse" id="hs18-collapse">
-                                <span class="position">University of British Columbia</span>
-                                <p>At this hackathon, our team built a project using blockchain to record and track
-                                    cases of
-                                    infectious diseases. My role was creating statistical analyses from blockchain
-                                    data.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-code"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2019</span>
-                            <h2>nwHacks 2019</h2>
-                            <hr style="border-color: #fd7e14">
-                            <a data-toggle="collapse" href="#nw19-collapse" role="button" aria-expanded="false"
-                               aria-controls="collapseExample" onclick="toggle_less_more(this)">▶ See More</a>
-                            <div class="collapse" id="nw19-collapse">
-                                <span class="position">University of British Columbia</span>
-                                <p>At this hackathon, our team built an android app that analysed gait using
-                                    accelerometer
-                                    data to identify the person walking using deep learning AI. My role in this
-                                    hackathon
-                                    was designing and training the deep learning model.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-code"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2019</span>
-                            <h2>hackseq 2019</h2>
-                            <span class="position">University of British Columbia</span>
-                            <p>Using machine learning, our team was able to identify which strains of the influenza
-                                virus were most succesful, with an accuracy of 86% compared to the WHO accuracy of
-                                40-60%. My role was to design vaccines and compare them to WHO-selected seasonal
-                                vaccines using the 'augur' pipeline. In addition, I visualised data gathered from our
-                                predictions.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-code"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2019</span>
-                            <h2>Local Hack Day- Build Day 2019</h2>
-                            <span class="position">University of British Columbia</span>
-                            <p>Our project is called Ubique, the Latin name for 'Anywhere'. Our project involves
-                                using a router and an 1 TB SSD to store all of Wikipedia and The Gutenberg Project,
-                                then serve them via an internet connection that you can bring anywhere. We used Flask
-                                and JS to build this application. My role was implementing The Gutenberg Project into
-                                Ubique.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-microscope"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2019</span>
-                            <h2>Volunteer Intern Researcher</h2>
-                            <span class="position">Simon Fraser University</span>
-                            <p>I am currently working at Simon Fraser University as a volunteer intern researcher in the
-                                Computer Science Department. My previous project was on implementing an improved version
-                                of the Robinson-Foulds metric calculation. My role in the project was porting,
-                                packaging, and performance testing code.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-lightbulb"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2015-2020</span>
-                            <h2>Science Fair Participant</h2>
-                            <span class="position">University of British Columbia, GVRSF</span>
-                            <p>From my freshman to senior year, I have been participating in the annual science fair. I
-                                have won an award every year of participation.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-team"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2017-2020</span>
-                            <h2>President</h2>
-                            <span class="position">VikingsDev</span>
-                            <p>VikingsDev is the Burnaby North Hack Club branch. We run mini-hackathons every
-                                meeting and build custom workshops for Burnaby North Seconday School students to follow
-                                so they can learn how to build a project. My role as the president is overseeing all
-                                aspects of the club.</p>
-                            <p><a href="https://vikingsdev.ca"
-                                  class="btn btn-primary py-3 px-3">Go to Website</a></p>
-                        </div>
-
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-team"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">2017-2020</span>
-                            <h2>Vice President and Director of Outreach</h2>
-                            <span class="position">vhHacks</span>
-                            <p>vhHacks will be the first high school hackathons to run on the West coast of Canada. We
-                                will be running on March 14-15 at UBC. My role in the non-profit organization is to
-                                oversee all aspects of operation, especially in finding and negotiating with
-                                sponsors.</p>
-                            <p><a href="https://vhhacks.ca"
-                                  class="btn btn-primary py-3 px-3">Go to Website</a></p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div id="page-3" class="page three">
-                    <h2 class="heading">Skills</h2>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-gear"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">Tools</span>
-                            <p>Git, Github<br>
-                                Inkscape, GIMP, Adobe Lightroom<br>
-                                Bash, Linux, Ubuntu <br></p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-code"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">Programming Languages</span>
-                            <p>Java, Python, R, C</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-paintbrush"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">Vector Graphics Design</span>
-                            <p>Over 4 years.</p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-camera"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">Photography</span>
-                            <p>Over 8 years.</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="page-4" class="page four">
-                    <h2 class="heading">Awards</h2>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-medal"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">April 2016, 2017</span>
-                            <h2>Honourable Mention x2</h2>
-                            <span class="position">Greater Vancouver Regional Science Fair</span>
-                            <p>My projects in freshman and sophomore year were on bucket sorting and swarm
-                                intelligence.</p>
-                            <div style="text-align: center">
-                                <div class="container col-md-8" style="display: inline-block">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <h7>CODE: J 135 F</h7>
-                                            <p>
-                                                <a href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2016&type=divisional"
-                                                   class="btn btn-primary py-3 px-3">2016</a></p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <h7>CODE: M 095 N</h7>
-                                            <p>
-                                                <a href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2017&type=divisional"
-                                                   class="btn btn-primary py-3 px-3">2017</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-medal"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">January 2018</span>
-                            <h2>Halite II</h2>
-                            <h2 style="color:silver">Rank 33</h2>
-                            <span class="date">Top High School Student in Canada</span><br>
-                            <span class="date">Rank 33 out of 5,832 players worldwide</span><br><br>
-                            <span class="position">Online Coding Competition by 2 Sigma</span>
-                            <p>Halite II was an AI competition where players built bots to defeat others in a game
-                                of planetary conquest.</p>
-                            <p><a href="Halite_Letter_for_FrankWhoee.pdf"
-                                  class="btn btn-primary py-3 px-3">Download Certification</a></p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-medal"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">April 2018</span>
-                            <h2>Analysing Traffic Problems Using Properties of
-                                Emergence Through the Use of Simulation</h2>
-                            <h2 style="color:silver">Silver Medal</h2>
-                            <span class="date">Best Mathematical Sciences Project</span><br>
-                            <span class="date">Best Computer Science Project</span><br>
-                            <span class="position">Greater Vancouver Regional Science Fair</span>
-                            <p>For this project, I built a traffic simulator with Processing Java, and tested different
-                                road formations for the fastest traffic flow.</p>
-                            <div style="text-align: center">
-                                <h7>CODE: S 011 F</h7>
-                                <div class="container col-md-8" style="display: inline-block">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p>
-                                                <a href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2018&type=divisional"
-                                                   class="btn btn-primary py-3 px-3">Divisional Award</a></p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p>
-                                                <a href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2018&type=special"
-                                                   class="btn btn-primary py-3 px-3">Special Awards</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-medal"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">January 2019</span>
-                            <h2>Top 20 Project</h2>
-                            <span class="position">nwHacks 2019</span>
-                            <p>At nwHacks 2019, we built an Android app that identified people based on their gait using
-                                accelerometer data from phones with deep learning AI. Our project won the Top 20 award
-                                out of 132 submitted projects and 708 participants.</p>
-                            <p><a href="https://devpost.com/software/stride-fs0ncy"
-                                  class="btn btn-primary py-3 px-3">DevPost</a></p>
-                        </div>
-                    </div>
-                    <div class="resume-wrap d-flex ftco-animate">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-medal"></span>
-                        </div>
-                        <div class="text pl-3">
-                            <span class="date">April 2019</span>
-                            <h2>Accurate Early Detection of GBM Brain Cancer
-                                With Deep Learning</h2>
-                            <h2 style="color:silver">Silver Medal</h2>
-                            <span class="date">Best Computer Science Project</span><br>
-                            <span class="date">BC Game Developers Innovation Award</span><br>
-                            <span class="position">Greater Vancouver Regional Science Fair</span>
-                            <p>In this project, I built a deep learning image recognition AI that expedited the
-                                diagnosis of brain cancer by processing MRI scans using a Convolutional Neural
-                                Network.</p>
-                            <div style="text-align: center">
-                                <h7>CODE: S 012 H</h7>
-                                <div class="container col-md-8" style="display: inline-block">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p>
-                                                <a href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2019&type=divisional"
-                                                   class="btn btn-primary py-3 px-3">Divisional Award</a></p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p>
-                                                <a href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2019&type=special"
-                                                   class="btn btn-primary py-3 px-3">Special Awards</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="ftco-section ftco-project" id="projects">
-    <div class="container-fluid px-md-0">
-        <div class="row no-gutters justify-content-center pb-5">
-            <div class="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated">
-                <h1 class="big big-2">Projects</h1>
-                <h2 class="mb-4 text-white">My Projects</h2>
-            </div>
-        </div>
-        <div style="padding-top: 10vh; text-align: center;">
-            <p style="display: inline-block"><a
-                    href="https://github.com/frankwhoee"
-                    class="btn btn-primary py-3 px-3">See all projects</a></p></div>
-        <div style="text-align: center;padding-top: 10vh;"><img src="images/aura-slide.png"
-                                                                style="width: 100%;display: inline-block"></div>
-        <div class="row no-gutters justify-content-center pb-5">
-            <div class="col-md-7 heading-section text-left ftco-animate fadeInUp ftco-animated">
-                <h2>Aura</h2>
-                <h3 class="mb-4 text-white">Accurate early detection of GBM Brain Cancer with AI</h3>
-                <h4>GVRSF 2019 - Silver Medal</h4>
-                <h4>GVRSF 2019 - Best Computer Science Project</h4>
-                <h4>GVRSF 2019 - BC Game Developer's Innovation Award</h4>
-                <p>
-                    Despite great advances in the field of oncology, glioblastoma multiforme’s extreme aggression still
-                    results in a grim prognosis. A median survival length of a mere 11-15 months, couples with one of
-                    the lowest survival rates of all cancers, at ~4%.
-                    <br><br>
-                    Simultaneously, detection models have made great progress with non-small cell lung cancer and
-                    Alzheimer's in the medical diagnostics industry, while the current conventional detection of brain
-                    tumors involves human inspection of radiological imagery for tissue abnormalities. Our project aims
-                    to utilize convolutional neural networks on MR imaging for the same purpose. Work was primarily
-                    split into three categories: data extraction and preprocessing of imagery, convolutional neural
-                    network training, and the machine learning classification period.
-                    <br><br>
-                    The automation of early-stage tumor detection drastically reduces the workload of radiologists, aids
-                    with patient outcomes through earlier treatment, and may provide insight into the characteristics of
-                    high-grade astrocytomas. MR Imaging and ML algorithms look promising regarding their potential
-                    applications in the medical field, particularly in the field of medical diagnoses.
-                </p>
-                <p><a href="https://github.com/frankwhoee/aura"
-                      class="btn btn-primary py-3 px-3">Go to Repository</a></p>
-            </div>
-        </div>
-        <div style="text-align: center;padding-top: 10vh;"><img src="images/ts-slide.png"
-                                                                style="width: 100%;display: inline-block"></div>
-        <div class="row no-gutters justify-content-center pb-5">
-            <div class="col-md-7 heading-section text-left ftco-animate fadeInUp ftco-animated">
-                <h2>TrafficSim</h2>
-                <h3 class="mb-4 text-white">Optimising and refining traffic through simulation</h3>
-                <h4>GVRSF 2018 - Silver Medal</h4>
-                <h4>GVRSF 2018 - Best Computer Science Project</h4>
-                <h4>GVRSF 2018 - Best Mathematical Sciences Project</h4>
-                <p>
-                    In our current traffic system, congestion has become a major problem. However, the problem of
-                    traffic creates a dilemma for governments as they often cannot afford to construct more roads due to
-                    their high cost and maintenance fees. Furthermore, paving new roads can lead to habitat segregation
-                    and environmental damage as large areas of landscape are cleared for their construction. As the
-                    demand for transportation grows, the problem of continued traffic congestion will inevitably follow
-                    the demand. To attempt to solve this problem, we set out to find the optimal and most efficient road
-                    system through simulated swarm intelligence as it would allow a smoother flow of traffic with the
-                    same construction and maintenance costs.
-                    <br><br>
-                    In our search for the answer to congestion, we coded a digital environment to simulate the flow of
-                    traffic with differing types of road systems. Each car has an objective and uses a typical
-                    breadth-first path-finding algorithm to navigate to its set destination. Furthermore, as our end
-                    goal was to create a program that could be feasibly used within real life scenarios, we implement
-                    the feature to create customized road networks to simulate traffic in cities. Due to the nature of
-                    computerized simulations, we had the ability to monitor and control each individual variable very
-                    precisely. This allowed us to maintain a very high level of consistency between each one of the
-                    trials.
-                    <br><br>
-                    The grid system, orbital system and tributary trees were tested to see which one was the most
-                    efficient. Each system was simulated 24 times, each one for a total of 30 001 ticks. After each
-                    trial, all the conditions would be reset so as not to affect future trials. Time was also kept to
-                    keep track of the performance of each trial.
-                    <br><br>
-                    The results prove that the grid system is the most efficient road system as it had an average of
-                    4.125 cars remaining at 30 001 ticks. In comparison, the orbital system had an average of 12.167
-                    cars remaining and the tributary trees had 41.75 cars remaining. Observing the simulation, we could
-                    determine that the cars in the grid system had a variety of routes that allowed each individual car
-                    to have multiple paths at its disposal. Overall, this allowed the grid system to perform the best
-                    that supports our original hypothesis.
-                </p>
-                <p><a href="https://github.com/FrankWhoee/TrafficSim"
-                      class="btn btn-primary py-3 px-3">Go to Repository</a></p>
-            </div>
-        </div>
-        <div style="text-align: center;padding-top: 10vh;"><img src="images/stride-slide.png"
-                                                                style="width: 100%;display: inline-block"></div>
-        <div class="row no-gutters justify-content-center pb-5">
-            <div class="col-md-7 heading-section text-left ftco-animate fadeInUp ftco-animated">
-                <h2>Stride ML</h2>
-                <h3 class="mb-4 text-white">Identification via gait accelerometer data on a phone using ML</h3>
-                <h4>nwHacks 2019 - Top 20 Award</h4>
-                <p>
-                    Stride is a machine learning project based on security. To protect against theft, we built an app
-                    that could track your phone's accelerometer data to determine who is carrying the phone. If the
-                    walking patterns are not consistent with the owner's walking pattern, the phone will alert the
-                    owner's smart watch. The core technology is the neural network that can identify the person walking,
-                    which can be applied to many smart devices, provided they have accelerometers. In the future, we
-                    hope to embed this in a tag that can be placed with bags, backpacks, wallets, etc. to protect your
-                    valuable belongings.
-                </p>
-                <div style="text-align: center">
-                    <div class="container col-md-5" style="display: inline-block">
-                        <div class="row">
-                            <div class="col-sm">
-                                <p><a href="https://github.com/FrankWhoee/Stride"
-                                      class="btn btn-primary py-3 px-3">Go to Repository</a></p>
-                            </div>
-                            <div class="col-sm">
-                                <p><a href="https://devpost.com/software/stride-fs0ncy"
-                                      class="btn btn-primary py-3 px-3">Go to DevPost</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="hero-wrap js-fullheight artbackgroundimage" id="art">
-    <div class="container heading-section">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col">
-                <div style="padding-top:21vh">
-                    <h2 class="big-art">Design <br> and <br>Photography</h2>
-                    <p style="font-size: 18px">I've been working with Inkscape for 4 years now, and I design logos for
-                        myself and other people,
-                        but when
-                        I have free time, I make art. I've also been doing photography for over 8 years now.</p>
-                    <p><a href="myartportfolio.pdf"
-                          class="btn btn-primary py-3 px-3">Download Art Portfolio</a></p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<br>
-
-
-<section class="ftco-section contact-section ftco-no-pb" id="contact">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h1 class="big big-2">Contact</h1>
-                <h2 class="mb-4">Contact Me</h2>
-            </div>
-        </div>
-        <br><br>
-        <div class="row d-flex contact-info mb-5">
-            <div class=" box" style="text-align: center">
-                <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="icon-paper-plane"></span>
-                </div>
-                <div>
-                    <h3 class="mb-4">Email Address</h3>
-                    <p><a href="mailto:huifrank@live.com">huifrank@live.com</a></p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    </div>
-</section>
-<div style="padding-top:20vh"></div>
-<img src="images/footer.png" style="width: 100%">
-
-
-<!-- loader -->
-<div id="ftco-loader" class="show fullscreen text-center" style="background-color: black">
-    <span style="display: inline-block;height: 100%;vertical-align: middle;"></span>
-    <img src="images/logo-white.png" style="vertical-align: middle; width: 10vw">
+<div style="position: absolute; top: 90%; left: 50%">
+    <a href="#about"><img class="arrow" src="images/arrowdown.svg" style="width: 20px;"></a>
 </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/scrollax.min.js"></script>
-<script src="js/main.js"></script>
+<div style="overflow: hidden">
+    <div class="row">
+        <div class="col">
+            <img src="images/aboutbg.svg" style="max-width: 95vw">
+        </div>
+        <div class="col p-5">
+            <h1 class="black" style="">ABOUT</h1>
+            <h3 class="black">I'm an undergraduate studying computer
+                science at UBC. My passion is coding and
+                I love making projects (like this website)
+                in my spare time. I also love art and
+                photography.</h3>
+            <div class="row pt-5">
+                <div class="col text-center">
+                    <img src="images/icons/github.svg">
+                </div>
+                <div class="col text-center">
+                    <img src="images/icons/devpost.svg">
+                </div>
+                <div class="col text-center">
+                    <img src="images/icons/flickr.svg">
+                </div>
+            </div>
+            <br><br><br>
+            <div class="text-center">
+                <a class="button" href="ResumeJan2022.pdf">DOWNLOAD RESUME</a>
+            </div>
+        </div>
+    </div>
+    <div class="px-4 pt-lg-5">
+        <div class="row">
+            <div class="col align-items-center" style="display: flex">
+                <img class="p-lg-5" src="images/depart.svg" style="max-width: 95vw">
+            </div>
+            <div class="col p-5" style="text-align: right">
+                <h1 class="black" style="">EDUCATION</h1>
 
+                <div class="row py-5">
+                    <div class="col">
+                        <img src="images/icons/north.svg" style="height: 100px">
+                    </div>
+                    <div class="col">
+                        <h3 class="black">
+                            Burnaby North Secondary School<br>
+                            <span class="grey">Dogwood Diploma</span><br>
+                            <span class="lightgrey">Sep 2015 - Jun 2020</span><br>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row py-5">
+                    <div class="col">
+                        <img src="images/icons/SFU.svg" style="height: 100px">
+                    </div>
+                    <div class="col">
+                        <h3 class="black">
+                            Simon Fraser University<br>
+                            <span class="grey">Concurrent Studies, CMPT 125 & 127</span><br>
+                            <span class="lightgrey">Sep 2019 - Dec 2019</span><br>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row py-5">
+                    <div class="col">
+                        <img src="images/icons/ubc.svg" style="height: 100px">
+                    </div>
+                    <div class="col">
+                        <h3 class="black">
+                            University of British Columbia<br>
+                            <span class="grey">BSc, Computer Science</span><br>
+                            <span class="lightgrey">Sep 2020 - Present</span><br>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col p-5">
+            <h1 class="black" style="">PROJECTS</h1>
+            <div class="row">
+                <div class="col-sm-auto">
+                    <img src="images/icons/stride.svg" style="height: 150px">
+                </div>
+                <div class="col">
+                    <h2>Stride</h2>
+                    My team and I created an Android app that identified people based on their walking patterns using
+                    machine learning models trained with data gathered from phone accelerometers.
+                    <br><br>
+                    <h3>AWARDS</h3>
+                    - Top 20 Award at nwHacks 2019
+                    <div class="row pt-3">
+                        <div class="col">
+                            <a class="button" href="https://github.com/FrankWhoee/Stride">GITHUB REPOSITORY</a>
+                        </div>
+                        <div class="col">
+                            <a class="button" href="https://devpost.com/software/stride-fs0ncy">PROJECT DEVPOST</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-sm-auto">
+                    <img src="images/icons/trafficsim.svg" style="height: 150px">
+                </div>
+                <div class="col">
+                    <h2>TrafficSim</h2>
+                    At the Greater Vancouver Regional Science Fair 2018, I built a platform for rapidly testing road
+                    formations for better traffic flow using Processing Java.
+
+                    Project Code: S 011 F
+                    <div class="row pt-3">
+                        <div class="col">
+                            <a class="button" href="https://github.com/FrankWhoee/Stride">GITHUB REPOSITORY</a>
+                        </div>
+                        <div class="col">
+                            <a class="button" href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2018&type=divisional">DIVISIONAL AWARD</a>
+                        </div>
+                        <div class="col">
+                            <a class="button" href="https://secure.youthscience.ca/sfiab/gvrsf/main_winners.php?year=2018&type=special">SPECIAL AWARD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <img src="images/cygnus.svg" style="width: 25vw">
+        </div>
+    </div>
+    <div class="text-center" style="width: 100vw; height: 100vh; max-width: 100%; display: flex; justify-content: center; align-items: center">
+        <img src="images/icons/tool.svg" style="width: 20vw; position: absolute; opacity: 0.1; z-index: -9999">
+        <h2>Oops, this site is still being worked on!<br> How about you check out my <a href="https://github.com/frankwhoee">Github</a> in the meantime?</h2>
+    </div>
+
+
+</div>
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
 </body>
 </html>
