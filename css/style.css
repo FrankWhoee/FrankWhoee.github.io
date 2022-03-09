@@ -86,9 +86,32 @@ body {
     transition: background-color 0.25s ease-in-out;
 }
 
-
-
 .button:hover{
     background-color: #d38d5f;
     color: white;
 }
+
+.flex{
+    display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+    .mobile-unfriendly {
+        display: none; !important
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .mobile-unkind {
+        display: none; !important
+    }
+    .mobile-kind {
+        display: block; !important
+    }
+}
+@media only screen and (min-width: 800px) {
+    .mobile-kind{
+        display: none;
+    }
+}
+

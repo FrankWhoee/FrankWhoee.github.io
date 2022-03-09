@@ -22,6 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>FrankWhoee</title>
 </head>
 <body style="background: white;">
@@ -51,8 +52,8 @@
 <div style="position: absolute; top: 90%; left: 50%">
     <a href="#about"><img class="arrow" src="images/arrowdown.svg" style="width: 20px;"></a>
 </div>
-<div style="position: absolute; bottom: 0; right: 50px">
-    <span id="typingtext" style="font-size: 5em"></span>
+<div style="position: absolute; bottom: 0; right: 2vw">
+    <span id="typingtext" style="font-size: 5vw"></span>
 </div>
 <div style="overflow: hidden">
     <div class="row" id="about">
@@ -86,7 +87,7 @@
     </div>
     <div class="px-4 pt-lg-5" id="resume">
         <div class="row">
-            <div class="col align-items-center" style="display: flex">
+            <div class="col align-items-center flex mobile-unkind">
                 <img class="p-lg-5" src="images/depart.svg" style="max-width: 95vw; width: 100%">
             </div>
             <div class="col p-5" style="text-align: right">
@@ -130,7 +131,11 @@
             </div>
         </div>
     </div>
-    <div class="row" style="padding-left: 150px">
+    <div style="display: flex; align-items: center; justify-content: center">
+        <img class="mobile-kind" src="images/depart.svg" style="max-width: 80vw; width: 100%">
+    </div>
+
+    <div class="row" style="padding-left: 5vw">
         <div class="col p-5">
             <h1 class="black" style="">PROJECTS</h1>
             <div class="row pt-5">
@@ -249,7 +254,7 @@
             </div>
         </div>
 
-        <div class="col-sm-4 text-center" style="display: flex; justify-content: center; align-items: center">
+        <div class="col-sm-4 text-center mobile-unfriendly flex" style="justify-content: center; align-items: center">
             <img src="images/cygnus.svg" style="width: 25vw">
         </div>
     </div>
