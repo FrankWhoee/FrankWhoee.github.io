@@ -117,10 +117,16 @@ body {
     .mobile-kind {
         display: block; !important
     }
+    #typingtext{
+        font-size: 5vw;
+    }
 }
 @media only screen and (min-width: 800px) {
     .mobile-kind{
         display: none;
+    }
+    #typingtext{
+        font-size: 3vw;
     }
 }
 

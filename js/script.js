@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    typeitloop()
+
+});
+
+function typeitloop(){
     new TypeIt("#typingtext", {
         speed: 50
     }).type("PROGRAMMER // 01")
@@ -17,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .pause(1500)
         .delete(9)
         .type("I AM FRANK HUI.")
+        .pause(10000)
+        .delete(15)
+        .exec(typeitloop)
         .go();
-
-
-});
-
+}
 
 anime({
     targets: '.arrow',
