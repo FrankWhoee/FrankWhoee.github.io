@@ -32,8 +32,8 @@
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="#join">HOME</a>
                 <a class="nav-link" href="#about">ABOUT</a>
-                <a class="nav-link" href="#socials">RESUME</a>
-                <a class="nav-link" href="#contact">ART</a>
+                <a class="nav-link" href="#resume">RESUME</a>
+                <a class="nav-link" href="#art">ART</a>
                 <a class="nav-link" href="#contact">CONTACT</a>
             </div>
         </div>
@@ -44,16 +44,18 @@
 <div style="background: transparent; height: 100vh; width: 100vw; max-width:100%; display: flex;
   justify-content: center; align-items: center;overflow: hidden">
 
-    <img src="images/launch.svg"
+    <img class="launch" src="images/launch.svg"
          style="position: absolute; left: -1%; top: 20%; width: 40vw; z-index: -9999; overflow: hidden">
     <img src="images/logoblack.svg" style="width: 10vw">
 </div>
 <div style="position: absolute; top: 90%; left: 50%">
     <a href="#about"><img class="arrow" src="images/arrowdown.svg" style="width: 20px;"></a>
 </div>
-
+<div style="position: absolute; bottom: 0; right: 50px">
+    <span id="typingtext" style="font-size: 5em"></span>
+</div>
 <div style="overflow: hidden">
-    <div class="row">
+    <div class="row" id="about">
         <div class="col">
             <img src="images/aboutbg.svg" style="max-width: 95vw">
         </div>
@@ -82,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div class="px-4 pt-lg-5">
+    <div class="px-4 pt-lg-5" id="resume">
         <div class="row">
             <div class="col align-items-center" style="display: flex">
                 <img class="p-lg-5" src="images/depart.svg" style="max-width: 95vw; width: 100%">
@@ -128,7 +130,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding-left: 150px">
         <div class="col p-5">
             <h1 class="black" style="">PROJECTS</h1>
             <div class="row pt-5">
@@ -247,7 +249,7 @@
             </div>
         </div>
 
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-4 text-center" style="display: flex; justify-content: center; align-items: center">
             <img src="images/cygnus.svg" style="width: 25vw">
         </div>
     </div>
@@ -333,7 +335,7 @@
     <div class="container text-center" style="width: 100vw; height: 100vh; max-width: 100%; display: flex; align-items: center; justify-content: center; position: absolute; overflow: hidden; z-index: -999">
         <img src="images/art.svg" style=" opacity: 0.1;">
     </div>
-    <div class="text-center" style="width: 100vw; height: 33vh; display: flex; align-items: end; justify-content: center; ">
+    <div class="text-center" style="width: 100vw; height: 33vh; display: flex; align-items: end; justify-content: center; " id="art">
         <h1 class="black">ART + PHOTOGRAPHY</h1>
     </div>
     <div class="text-center" style="width: 100vw; height: 33vh; display: flex; align-items: center; justify-content: center; ">
@@ -342,17 +344,18 @@
     <div class="text-center" style="width: 100vw; height: 33vh; display: flex; align-items: start; justify-content: center;">
         <a class="button" href="myartportfolio.pdf">ART PORTFOLIO</a>
     </div>
-    <div class="container text-center" style="width: 100vw; height: 50vh; max-width: 100%; display: flex; align-items: center; justify-content: center; position: absolute; z-index: -999">
+    <div class="container text-center" style="width: 100vw; height: 100vh; max-width: 100%; display: flex; align-items: center; justify-content: center; position: absolute; z-index: -999">
         <img src="images/landing.svg" style="position: absolute; z-index: -999">
     </div>
-    <div class="text-center" style="width: 100vw; height: 50vh; display: flex; align-items: start; justify-content: center;">
-        <a href="mailto:me@frankwhoee.com" style="color: #d38d5f;"><h2 style="font-size: 10vh" >me@frankwhoee.com</h2></a>
+    <div class="text-center" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;" id="contact">
+        <a href="mailto:me@frankwhoee.com" style="color: #d38d5f;"><h2 style="font-size: 10vh;" >me@frankwhoee.com</h2></a>
     </div>
 
-    <div class="text-center" style="width: 100vw; height: 100vh; max-width: 100%; display: flex; justify-content: center; align-items: center">
-        <img src="images/icons/tool.svg" style="width: 20vw; position: absolute; opacity: 0.1; z-index: -9999">
-        <h2>Oops, this site is still being worked on!<br> How about you check out my <a href="https://github.com/frankwhoee">Github</a> in the meantime?</h2>
-    </div>
+
+<!--    <div class="text-center" style="width: 100vw; height: 100vh; max-width: 100%; display: flex; justify-content: center; align-items: center">-->
+<!--        <img src="images/icons/tool.svg" style="width: 20vw; position: absolute; opacity: 0.1; z-index: -9999">-->
+<!--        <h2>Oops, this site is still being worked on!<br> How about you check out my <a href="https://github.com/frankwhoee">Github</a> in the meantime?</h2>-->
+<!--    </div>-->
     <div style="width: 100vw;">
         <img src="images/landed.svg" style="width: 100vw">
     </div>
@@ -366,6 +369,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/script.js"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
