@@ -99,6 +99,15 @@ body {
     .mobile-unfriendly {
         display: none; !important
     }
+    .mobile-friendly {
+        display: block; !important
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile-friendly {
+        display: none; !important
+    }
 }
 
 @media only screen and (max-width: 800px) {

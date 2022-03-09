@@ -31,7 +31,6 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#join">HOME</a>
                 <a class="nav-link" href="#about">ABOUT</a>
                 <a class="nav-link" href="#resume">RESUME</a>
                 <a class="nav-link" href="#art">ART</a>
@@ -43,7 +42,7 @@
 
 
 <div style="background: transparent; height: 100vh; width: 100vw; max-width:100%; display: flex;
-  justify-content: center; align-items: center;overflow: hidden">
+  justify-content: center; align-items: center;overflow: hidden" id="home">
 
     <img class="launch" src="images/launch.svg"
          style="position: absolute; left: -1%; top: 20%; width: 40vw; z-index: -9999; overflow: hidden">
@@ -264,11 +263,14 @@
     <div class="px-4 pt-lg-5">
             <div class="col p-5 text-center">
                 <h1 class="black" style="">AWARDS</h1>
+                <div class="text-center mobile-friendly">
+                        <img src="images/icons/twosigma.png" style="height: 100px;">
+                </div>
                 <div class="row justify-content-center py-5">
-                    <div class="col-sm-1 text-center align-items-center" style="display:flex;">
+                    <div class="col-sm-1 text-center align-items-center mobile-unfriendly flex">
                         <img src="images/icons/twosigma.png" style="height: 100px;">
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-auto">
                         <h3 class="black">
                             Top 3 in Canada, Halite II<br>
                             <span class="grey">Two Sigma AI Competition</span><br>
@@ -277,12 +279,14 @@
                         </h3>
                     </div>
                 </div>
-
+                <div class="text-center mobile-friendly">
+                        <img src="images/icons/nwhacks.png" style="height: 100px;">
+                </div>
                 <div class="row justify-content-center py-5">
-                    <div class="col-sm-1 text-center align-items-center" style="display:flex;">
+                    <div class="col-sm-1 text-center align-items-center mobile-unfriendly flex" >
                         <img src="images/icons/nwhacks.png" style="height: 100px;">
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-auto">
                         <h3 class="black">
                             Top 20 Award, nwHacks 2019<br>
                             <span class="grey">133 projects total</span><br>
