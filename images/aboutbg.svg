@@ -2,15 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="255.05521mm"
+   width="276.18164mm"
    height="288.2196mm"
-   viewBox="0 0 255.05521 288.21961"
+   viewBox="0 0 276.18164 288.21961"
    version="1.1"
    id="svg158656"
    sodipodi:docname="aboutbg.svg"
    inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -23,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.48567463"
-     inkscape:cx="243.99051"
-     inkscape:cy="477.68606"
+     inkscape:zoom="0.17171191"
+     inkscape:cx="-1249.1853"
+     inkscape:cy="646.43156"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="0"
@@ -33,7 +34,29 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs158653" />
+     id="defs158653">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient32519">
+      <stop
+         style="stop-color:#d38d5f;stop-opacity:1;"
+         offset="0"
+         id="stop32515" />
+      <stop
+         style="stop-color:#d38d5f;stop-opacity:0;"
+         offset="1"
+         id="stop32517" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient32519"
+       id="linearGradient32521"
+       x1="198.45055"
+       y1="12.478109"
+       x2="234.58807"
+       y2="39.725212"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
@@ -45,10 +68,10 @@
        d="M 544.66797,0 A 544.6672,544.6672 0 0 0 187.02148,134.36328 V 954.9707 A 544.6672,544.6672 0 0 0 544.66797,1089.334 544.6672,544.6672 0 0 0 1089.334,544.66797 544.6672,544.6672 0 0 0 544.66797,0 Z"
        transform="matrix(0.26458333,0,0,0.26458333,-83.301395,-10.440598)" />
     <circle
-       style="fill:#000000;stroke-width:1;stop-color:#000000"
+       style="fill:url(#linearGradient32521);fill-opacity:1;stroke-width:1;stop-color:#000000"
        id="path159854"
-       cx="174.93509"
-       cy="48.386112"
+       cx="214.97853"
+       cy="27.284018"
        r="27.384466" />
     <g
        id="g4089"

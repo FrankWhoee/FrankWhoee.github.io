@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="76.717484mm"
-   height="233.17651mm"
-   viewBox="0 0 76.717484 233.17651"
+   width="202.7065mm"
+   height="150.64182mm"
+   viewBox="0 0 202.7065 150.64181"
    version="1.1"
    id="svg136542"
    inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
@@ -24,8 +24,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.68684764"
-     inkscape:cx="-117.20212"
-     inkscape:cy="487.73553"
+     inkscape:cx="112.83434"
+     inkscape:cy="291.18539"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="0"
@@ -38,10 +38,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-136.14321,-19.39231)">
+     transform="translate(-75.155325,-71.551273)">
     <g
        id="g131547"
-       transform="matrix(0.74188885,0,0,0.74188885,-152.3404,77.6393)">
+       transform="matrix(0.52459464,0.52459463,-0.52459463,0.52459464,-13.58572,-135.7506)">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.999549;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 405.3931,166.27142 -8.80534,9.13473 -7.73759,44.28285 10.47151,2.16067 11.37334,-59.37671 z"
