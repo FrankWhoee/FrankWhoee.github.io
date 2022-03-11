@@ -36,3 +36,4 @@ anime({
     loop: true,
     easing: 'easeInOutSine'
 });
+

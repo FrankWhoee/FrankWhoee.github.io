@@ -40,6 +40,15 @@
 .lightgrey{
     color: lightgray;
 }
+
+a{
+    color: #d38d5f;
+}
+
+a:hover{
+    color: #a05a2c;
+}
+
 a:link {
     text-decoration: none;
 }
