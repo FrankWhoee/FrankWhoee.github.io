@@ -4,14 +4,15 @@
     font-weight: normal;
     font-style: normal;
 }
-*{
+
+* {
     font-family: "Acre Medium";
     color: black;
 }
 
 ::-webkit-scrollbar {
     width: 14px;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -21,31 +22,32 @@
     background-color: #d38d5f;
 }
 
-.white{
+.white {
     color: white;
 }
 
-.black{
+.black {
     color: black;
 }
 
-.gold{
-    color: #d38d5f; !important;
+.gold {
+    color: #d38d5f;
+!important;
 }
 
-.grey{
+.grey {
     color: grey;
 }
 
-.lightgrey{
+.lightgrey {
     color: lightgray;
 }
 
-a{
+a {
     color: #d38d5f;
 }
 
-a:hover{
+a:hover {
     color: #a05a2c;
 }
 
@@ -57,7 +59,7 @@ a:visited {
     text-decoration: none;
 }
 
-h1{
+h1 {
     font-size: 10vw;
 }
 
@@ -76,6 +78,7 @@ body {
     background: #000;
     flex-wrap: wrap;
 }
+
 .break {
     flex-basis: 100%;
     height: 0;
@@ -95,47 +98,86 @@ body {
     transition: background-color 0.25s ease-in-out;
 }
 
-.button:hover{
+.button:hover {
     background-color: #d38d5f;
     color: white;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
 @media only screen and (max-width: 1000px) {
     .mobile-unfriendly {
-        display: none; !important
+        display: none;
+    !important
     }
+
     .mobile-friendly {
-        display: block; !important
+        display: block;
+    !important
     }
 }
 
 @media only screen and (min-width: 1000px) {
     .mobile-friendly {
-        display: none; !important
+        display: none;
+    !important
     }
 }
 
 @media only screen and (max-width: 800px) {
     .mobile-unkind {
-        display: none; !important
+        display: none;
+    !important
     }
+
     .mobile-kind {
-        display: block; !important
+        display: block;
+    !important
     }
-    #typingtext{
+
+    #typingtext {
         font-size: 5vw;
     }
 }
+
 @media only screen and (min-width: 800px) {
-    .mobile-kind{
+    .mobile-kind {
         display: none;
     }
-    #typingtext{
+
+    #typingtext {
         font-size: 3vw;
     }
 }
 
+.parallax {
+    /* The image used */
+    background-image: url("../images/starliner.svg");
+    position: relative;
+    /* Set a specific height */
+    min-height: 1000px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cutout {
+    background-color: black;
+    color: white;
+    font-size: 10vw; /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto; /* Center the text container */
+    padding: 10px;
+    width: 50%;
+    text-align: center; /* Center text */
+    position: absolute; /* Position text */
+    top: 50%; /* Position text in the middle */
+    left: 50%; /* Position text in the middle */
+    transform: translate(-50%, 30%); /* Position text in the middle */
+    mix-blend-mode: multiply; /* This makes the cutout text possible */
+}
