@@ -1,0 +1,33 @@
+@font-face {
+    font-family: AriataMed;
+    src: url(./assets/AriataStencilMedium.otf);
+}
+
+@font-face {
+    font-family: AriataReg;
+    src: url(./assets/AriataStencilRegular.otf);
+}
+
+@font-face {
+    font-family: AriataBold;
+    src: url(./assets/AriataStencilBold.otf);
+}
+
+.animated {
+    font-family: AriataBold;
+    font-size: 10vh;
+    position: relative;
+    margin: 0;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.App {
+    overflow-x: hidden;
+}
