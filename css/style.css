@@ -1,0 +1,114 @@
+@font-face {
+    font-family: Ariata;
+    src: url("../fonts/ariata.otf");
+}
+
+h1 {
+    font-family: Ariata;
+    stroke: none;
+    font-size: 600%;
+    letter-spacing: 0.5rem;
+}
+
+.textball-wrapper {
+    height: 100vw;
+    position: relative;
+    width: 100vw;
+}
+
+.textball {
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 0) 70.3%
+    );
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.textball::before {
+    content: "";
+    float: left;
+    height: 100%;
+    width: 50%;
+    shape-outside: polygon(50vw 70vw 100vw 70vw 100vw 100vw 50vw 100vw);
+    shape-margin: 7%;
+}
+
+.textball h1 {
+    height: 100%;
+    line-height: 1.25;
+    padding: 0;
+    text-align: center;
+}
+
+.bigball {
+    height: 95vw;
+    width: 95vw;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.smallball {
+    height: 5vw;
+    width: 5vw;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ariata {
+    font-family: Ariata;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+body {
+    overflow: overlay;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.centeredVideo {
+    display: block;
+    margin: auto;
+}
+
+.windowVideo {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-timing-function: ease;
+
+    animation-name: appear;
+    /* animation-range: contain; */
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.5;
+        transform: translateY(500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
