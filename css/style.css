@@ -6,7 +6,21 @@
 h1 {
     font-family: Ariata;
     stroke: none;
-    font-size: 600%;
+    font-size: 7rem;
+    letter-spacing: 0.5rem;
+}
+
+h2 {
+    font-family: Ariata;
+    stroke: none;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+}
+
+h3 {
+    font-family: Ariata;
+    stroke: none;
+    font-size: 3rem;
     letter-spacing: 0.5rem;
 }
 
@@ -93,10 +107,9 @@ body {
 .windowVideo {
     view-timeline: --subjectReveal block;
     animation-timeline: --subjectReveal;
-    animation-timing-function: ease;
 
     animation-name: appear;
-    /* animation-range: contain; */
+    animation-range: entry contain 50%;
     animation-fill-mode: both;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
@@ -104,11 +117,239 @@ body {
 @keyframes appear {
     from {
         opacity: 0.5;
+        filter: blur(1rem);
         transform: translateY(500px);
     }
 
     to {
         opacity: 1;
+        filter: blur(0);
         transform: translateY(0px);
     }
+}
+
+.smallBallAnimation {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-name: smallBallAppear;
+    animation-range: entry 0% contain 50%;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+}
+
+@keyframes smallBallAppear {
+    from {
+        filter: blur(1.5rem);
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: blur(0);
+        transform: translateY(0px);
+    }
+}
+
+.toBlack {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-name: toBlackAnimation;
+    animation-range: contain;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+}
+
+@keyframes toBlackAnimation {
+    from {
+        color: #000;
+        background-color: #fff;
+    }
+
+    to {
+        color: #fff;
+        background-color: #000;
+    }
+}
+
+.companyLogo {
+    max-width: 10vw;
+}
+
+@media only screen and (max-width: 700px) {
+    .companyLogo {
+        max-width: 25vw;
+    }
+
+    .mobileShow {
+        display: initial;
+    }
+
+    .pcShow {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .companyLogo {
+        max-width: 25vw;
+    }
+
+    .mobileShow {
+        display: none;
+    }
+
+    .pcShow {
+        display: initial;
+    }
+}
+
+.container-custom {
+    max-width: 800px; /* Max width for the content */
+    padding: 30px;
+    /* Removed border-radius */
+    /* Removed box-shadow */
+}
+.company-entry {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    /* Removed border-bottom */
+}
+.company-entry:last-child {
+    /* No border for the last item - no longer needed as border is removed */
+}
+.company-logo {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+    width: 150px; /* Fixed width for logos */
+    height: auto;
+    object-fit: contain; /* Ensure logo scales properly within its box */
+    margin-right: 30px; /* Space between logo and text */
+    padding: 10px; /* Padding around the logo */
+}
+.company-details {
+    flex-grow: 1; /* Allow details to take remaining space */
+    text-align: right; /* Align text to the right */
+}
+.company-details p {
+    margin-bottom: 0; /* Remove default paragraph margin */
+    line-height: 1.4; /* Improve line spacing */
+}
+.company-details .role {
+    font-weight: 500; /* Slightly bolder role */
+}
+.company-details .date {
+}
+
+.toWhite {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-name: toWhiteAnimation;
+    animation-range: contain 0% contain 10%;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+}
+
+@keyframes toWhiteAnimation {
+    from {
+        color: #fff;
+        background-color: #000;
+    }
+
+    to {
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+.education-entry {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+.education-logo {
+    flex-shrink: 0;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 40px;
+    padding: 5px;
+}
+.education-details {
+    flex-grow: 1;
+}
+.education-details p {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.education-details .degree {
+    font-weight: 500;
+    color: #343a40;
+    font-size: 1.2rem;
+}
+.education-details .date {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.planet-visual {
+    transform: translateY(-20%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    /* For Bootstrap's 'lg' breakpoint and below (typically tablets and smaller desktops) */
+    .left-column,
+    .right-column {
+        flex: 1 1 100%; /* Stacks columns vertically on smaller screens */
+        padding-right: 15px; /* Adjust padding for stacked layout */
+        padding-left: 15px;
+    }
+    .right-column {
+        order: -1; /* Places the visual column above the text content on small screens */
+        min-height: 300px; /* Adjust height for the visual on smaller screens */
+    }
+    .planet-visual {
+        transform: translateX(50%) translateY(-20%); /* Adjust its size relative to the column */
+    }
+}
+@media (max-width: 768px) {
+    .education-entry {
+        flex-direction: column; /* Stack logo and details vertically */
+        align-items: flex-start; /* Align stacked items to the left */
+    }
+    .education-logo {
+        width: 80px; /* Smaller logo on mobile */
+        margin-right: 0;
+        margin-bottom: 15px; /* Space below logo when stacked */
+    }
+}
+
+/* This wrapper contains the entire LEARNING section, allowing it to flow in the page */
+.learning-section-container {
+    max-height: 100vh;
+    max-width: 100vw; /* Maximum width for the entire section content */
+    margin: 50px auto; /* Adds margin top/bottom and centers it horizontally */
+    position: relative; /* Essential for containing absolutely positioned children */
+    padding: 20px; /* Add some padding to prevent content from touching edges */
+}
+
+/* This flex container organizes the text content and the visual elements side-by-side */
+.learning-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+    align-items: flex-start; /* Aligns content to the top within the flex items */
+}
+
+.left-column {
+    flex: 1 1 50%; /* Takes 50% width on larger screens */
+    padding-right: 40px; /* Space between text and visual on larger screens */
+}
+
+.right-column {
+    flex: 1 1 50%; /* Takes 50% width on larger screens */
+    position: relative; /* Crucial for absolutely positioning the planet and dot within this column */
+    min-height: 400px; /* Ensures enough vertical space for the visual elements */
+    display: flex; /* Using flex for centering the elements initially, though absolute takes precedence */
+    justify-content: center;
+    align-items: center;
 }

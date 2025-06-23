@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="232.37773mm"
+   height="367.069mm"
+   viewBox="0 0 232.37773 367.069"
+   version="1.1"
+   id="svg555"
+   sodipodi:docname="planetwithmoon.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview557"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.44631734"
+     inkscape:cx="732.66255"
+     inkscape:cy="548.93677"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="4480"
+     inkscape:window-y="360"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs552" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.1883774,128.4028)">
+    <path
+       id="path4789"
+       style="fill:#000000;stroke:none;stroke-width:12;stroke-linecap:square"
+       d="M 208.38677,-128.4028 A 183.53441,183.53441 0 0 0 24.85224,55.1317 a 183.53441,183.53441 0 0 0 183.53453,183.5345 183.53441,183.53441 0 0 0 25.17934,-1.805 v -363.5148 a 183.53441,183.53441 0 0 0 -25.17934,-1.7492 z" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.708285;stroke-linecap:square"
+       id="circle4791"
+       cx="12.021257"
+       cy="-90.889626"
+       r="10.83288" />
+  </g>
+</svg>

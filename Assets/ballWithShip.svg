@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="238.73685mm"
+   width="682.34332mm"
    height="288.2196mm"
-   viewBox="0 0 238.73685 288.2196"
+   viewBox="0 0 682.34334 288.2196"
    version="1.1"
    id="svg3788"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.89263468"
-     inkscape:cx="494.04309"
-     inkscape:cy="463.79556"
+     inkscape:zoom="0.11157934"
+     inkscape:cx="421.22495"
+     inkscape:cy="1559.4285"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="4480"
@@ -136,5 +136,16 @@
            sodipodi:nodetypes="cccc" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:56.1699px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.40425"
+       x="550.13684"
+       y="191.01733"
+       id="text587"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Ariata Stencil';-inkscape-font-specification:'Ariata Stencil';text-align:end;text-anchor:end;stroke-width:1.40425"
+         x="550.13684"
+         y="191.01733"
+         id="tspan4003">CAREER</tspan></text>
   </g>
 </svg>
