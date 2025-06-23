@@ -309,7 +309,7 @@ body {
         min-height: 300px; /* Adjust height for the visual on smaller screens */
     }
     .planet-visual {
-        transform: translateX(50%) translateY(-20%); /* Adjust its size relative to the column */
+        transform: translateY(-20%); /* Adjust its size relative to the column */
     }
 }
 @media (max-width: 768px) {
@@ -321,6 +321,9 @@ body {
         width: 80px; /* Smaller logo on mobile */
         margin-right: 0;
         margin-bottom: 15px; /* Space below logo when stacked */
+    }
+    .planet-visual {
+        display: none; /* Adjust its size relative to the column */
     }
 }
 
